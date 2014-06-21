@@ -1,0 +1,10 @@
+<%= form_for :characteristic, url: {action: 'update'}, method: :patch do |f| %>
+	
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	
+	<input name="commit" type="submit" value="Salvar Alteração" />
+
+<% end %>

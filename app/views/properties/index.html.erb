@@ -1,0 +1,9 @@
+<% @properties.each do |property| %>
+	
+	<div class="property">
+		<p> <%= link_to 'Ver Detalhes', controller: "properties", action: "show", id: property %>
+		<p> <%= property.cep %></p>
+		<p> <%= property.endereco %></p>
+	</div>
+
+<% end %>

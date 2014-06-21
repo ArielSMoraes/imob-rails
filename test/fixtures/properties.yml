@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cep: MyString
+  endereco: MyString
+  dormitorios: 1
+  financiado: false
+  descricao: MyString
+  numero: 1
+
+two:
+  cep: MyString
+  endereco: MyString
+  dormitorios: 1
+  financiado: false
+  descricao: MyString
+  numero: 1

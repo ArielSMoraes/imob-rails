@@ -1,6 +1,29 @@
 ImobRails::Application.routes.draw do
 
   root 'home#index'
+  
+  #property
+  get 'properties' => 'properties#index'
+  get 'properties/new' => 'properties#new'
+  get 'properties/:id' => 'properties#show'
+  get 'properties/:id/edit' => 'properties#edit'
+  post 'properties/new' => 'properties#create'
+  patch 'properties/:id' => 'properties#update'
+  put 'properties/:id' => 'properties#update'
+  delete 'properties/:id' => 'properties#delete'
+
+
+  #characteristics
+  get 'characteristics' => 'characteristics#index'
+  get 'characteristics/new' => 'characteristics#new'
+  get 'characteristics/:id' => 'characteristics#show'
+  get 'characteristics/:id/edit' => 'characteristics#edit'
+  post 'characteristics/new' => 'characteristics#create'
+  patch 'characteristics/:id' => 'characteristics#update'
+  put 'characteristics/:id' => 'characteristics#update'
+  delete 'characteristics/:id' => 'characteristics#delete'
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

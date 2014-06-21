@@ -1,0 +1,8 @@
+<ul class="property">
+<% @characteristics.each do |characteristic| %>	
+		<li>
+			<%= link_to characteristic.name, controller: "characteristics", action: "show", id: characteristic %>
+		</li>
+<% end %>
+
+</ul>

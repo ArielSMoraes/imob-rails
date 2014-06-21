@@ -1,0 +1,35 @@
+<%= form_for :property, url: {action: 'update'}, method: :patch do |f| %>
+	
+	<p>
+		<%= f.label :cep %>
+		<%= f.text_field :cep %>
+	</p>
+
+	<p>
+		<%= f.label :endereco %>
+		<%= f.text_field :endereco %>
+	</p>
+	
+	<p>
+		<%= f.label :dormitorios %>
+		<%= f.text_field :dormitorios %>
+	</p>
+
+	<p>
+		<%= f.label :financiado %>
+		<%= f.text_field :financiado %>
+	</p>
+
+	<p>
+		<%= f.label :descricao %>
+		<%= f.text_field :descricao %>
+	</p>
+
+	<p>
+		<%= f.label :numero %>
+		<%= f.text_field :numero %>
+	</p>
+	
+	<input name="commit" type="submit" value="Salvar Modificações" />
+
+<% end %>

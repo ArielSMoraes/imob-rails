@@ -8,7 +8,23 @@
 </head>
 <body>
 
-<%= yield %>
+<section id="centralize">
+	<header>
+		<nav>
+			<ul>
+				<li><%= link_to 'Listar Todos Imoveis', controller: "properties", action: "index"%></li>
+
+				<li><%= link_to 'Novo Imovel', controller: "properties", action: "new" %></li>
+
+				<li><%= link_to 'Listar Todas Caracteristicas', controller: "characteristics", action: "index" %></li>
+
+				<li><%= link_to 'Nova Caracteristicas', controller: "characteristics", action: "new" %></li>
+			</ul>
+		</nav>
+	</header>
+
+	<%= yield %>
+</section>
 
 </body>
 </html>
