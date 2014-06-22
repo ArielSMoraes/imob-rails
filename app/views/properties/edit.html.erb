@@ -17,7 +17,7 @@
 
 	<p>
 		<%= f.label :financiado %>
-		<%= f.text_field :financiado %>
+		<%= f.check_box :financiado %>
 	</p>
 
 	<p>
@@ -32,4 +32,20 @@
 	
 	<input name="commit" type="submit" value="Salvar Modificações" />
 
+	<% @property.characteristics.each do |characteristic| %>
+		<p> <%= characteristic.name %> 
+			<%= link_to 'Remover', {controller: "properties", action:"remove_characteristic", property: @property.id, characteristic: characteristic.id}, method: :delete, data: {confirm: 'Deseja realmente remover está categoria?' } %>
+		</p>
+	<% end %>
+
+<% end %>
+
+<%= form_for :property, url: {action: 'new_characteristic'}, method: :post do |f| %>
+		<input type="hidden" name="id" value="<%= @property.id %>" / >
+		<select name="characteristic">
+			<% @characteristics.each do |characteristic| %>
+				<option value ="<%= characteristic.id %>"> <%= characteristic.name %> </option>
+			<% end %>
+		</select>
+		<input type="submit" value="Adicionar Caracteristica" name="commit" />
 <% end %>

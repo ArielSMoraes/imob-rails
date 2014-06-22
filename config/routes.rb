@@ -10,8 +10,6 @@ ImobRails::Application.routes.draw do
   post 'properties/new' => 'properties#create'
   patch 'properties/:id' => 'properties#update'
   put 'properties/:id' => 'properties#update'
-  delete 'properties/:id' => 'properties#delete'
-
 
   #characteristics
   get 'characteristics' => 'characteristics#index'
@@ -20,9 +18,15 @@ ImobRails::Application.routes.draw do
   get 'characteristics/:id/edit' => 'characteristics#edit'
   post 'characteristics/new' => 'characteristics#create'
   patch 'characteristics/:id' => 'characteristics#update'
-  put 'characteristics/:id' => 'characteristics#update'
+  put 'characteristics/:id' => 'characteristics#update'  
+
+  #characteristics assossiation
+  post 'properties/new_characteristic' => 'properties#new_characteristic'
+
+  #deletes
+  delete 'properties/remove_characteristic' => 'properties#remove_characteristic'
+  delete 'properties/:id' => 'properties#delete'
   delete 'characteristics/:id' => 'characteristics#delete'
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -3,12 +3,12 @@
 	<li><%= link_to 'Deletar', {controller: "properties", action: "delete", id: @property} , method: :delete, data: {confirm: 'Deseja realmente deletar este imóvel' } %></li>
 </ul>
 
-<p> <%= @property.cep %></p>
-<p> <%= @property.endereco %></p>
-<p> <%= @property.dormitorios %></p>
-<p> <%= @property.financiado %></p>
-<p> <%= @property.descricao %></p>
-<p> <%= @property.numero %></p>
+<p> <%= "Cep: " + @property.cep %></p>
+<p> <%= "Endereco: " + @property.endereco %></p>
+<p> <%= "Dormitorios: " + @property.dormitorios.to_s %></p>
+<p> <%= "Financiado: " + (@property.financiado ? "Sim" : "Não") %></p>
+<p> <%= "Descricao: " + @property.descricao %></p>
+<p> <%= "Número: " + @property.numero.to_s %></p>
 
 <h2>Caracteristicas</h2>
 <% @property.characteristics.each do |characteristic| %>
