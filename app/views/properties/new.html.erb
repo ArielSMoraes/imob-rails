@@ -12,12 +12,12 @@
 	
 	<p>
 		<%= f.label :dormitorios %>
-		<%= f.text_field :dormitorios %>
+		<%= f.number_field :dormitorios %>
 	</p>
 
 	<p>
 		<%= f.label :financiado %>
-		<%= f.text_field :financiado %>
+		<%= f.check_box :financiado %>
 	</p>
 
 	<p>
@@ -27,7 +27,7 @@
 
 	<p>
 		<%= f.label :numero %>
-		<%= f.text_field :numero %>
+		<%= f.number_field :numero %>
 	</p>
 	
 	<input name="commit" type="submit" value="Salvar Imovel" />
