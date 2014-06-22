@@ -54,7 +54,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: imob-rails_production
+  database: dck09l9qhtl5kp
   pool: 5
-  username: imob-rails
-  password:
+  username: gxsonuiflzfgwp
+  password: TqAxZcH43EBoERPvWhpAEdkdeJ
