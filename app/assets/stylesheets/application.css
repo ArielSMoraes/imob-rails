@@ -36,3 +36,16 @@ a{
 	width: 980px;
 	margin: auto;
 }
+
+ul.characteristic{
+	padding: 0;
+}
+
+.characteristic li{
+	background-color: #FFF;
+	display: block;
+}
+
+.characteristic li a{
+	color: #955;
+}

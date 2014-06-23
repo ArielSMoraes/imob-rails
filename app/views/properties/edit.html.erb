@@ -22,7 +22,7 @@
 
 	<p>
 		<%= f.label :descricao %>
-		<%= f.text_field :descricao %>
+		<%= f.text_area :descricao %>
 	</p>
 
 	<p>
@@ -40,12 +40,14 @@
 
 <% end %>
 
-<%= form_for :property, url: {action: 'new_characteristic'}, method: :post do |f| %>
-		<input type="hidden" name="id" value="<%= @property.id %>" / >
-		<select name="characteristic">
-			<% @characteristics.each do |characteristic| %>
-				<option value ="<%= characteristic.id %>"> <%= characteristic.name %> </option>
-			<% end %>
-		</select>
-		<input type="submit" value="Adicionar Caracteristica" name="commit" />
+<% if @characteristics.length != 0 %>
+	<%= form_for :property, url: {action: 'new_characteristic'}, method: :post do |f| %>
+			<input type="hidden" name="id" value="<%= @property.id %>" / >
+			<select name="characteristic">
+				<% @characteristics.each do |characteristic| %>
+					<option value ="<%= characteristic.id %>"> <%= characteristic.name %> </option>
+				<% end %>
+			</select>
+			<input type="submit" value="Adicionar Caracteristica" name="commit" />
+	<% end %>
 <% end %>

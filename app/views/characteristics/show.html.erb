@@ -3,4 +3,4 @@
 	<li><%= link_to 'Deletar', {controller: "characteristics", action: "delete", id: @characteristic} , method: :delete, data: {confirm: 'Deseja realmente deletar esta categoria?' } %></li>
 </ul>
 
-<p> <%= @characteristic.name %></p>
+<p class="characteristic"> <%= @characteristic.name %></p>
